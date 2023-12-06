@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 
+function App() {
 const name = 'Gyancarlos';
 const intro = <h1>Hello, Universe!</h1>;
 const nameIntro = <h1>Hello, {name}</h1>;
@@ -13,7 +14,6 @@ const parts = (
         <h2>Part 2</h2>
   </React.Fragment>
 );
-function App() {
   return (
     <div className="App">
       <header className="App-header">
