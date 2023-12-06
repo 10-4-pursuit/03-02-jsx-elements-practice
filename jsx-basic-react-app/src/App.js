@@ -1,39 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
 
-const name = "Andrew"
+const name = "Andrew";
+const user = { firstName: 'Andrew', lastName: 'Thomas' };
+const hello = <h1>Hello, World!</h1>;
+const greeting = <h1>Hello, {name}</h1>;
+const fullName = <h1>{formatName(user)}</h1>;
+const parts = <div><h2>Part 1</h2><h2>Part 2</h2></div>;
+const image = <img src="https://livingsimplyy.files.wordpress.com/2016/09/6847284-samurai-champloo-wallpaper.jpg?w=1200" />;
+const click = <button onClick={buttonClicked}>Click Me</button>
 
 function formatName(user) {
   return user.firstName + ' ' + user.lastName;
 }
-const user = { firstName: 'Andrew', lastName: 'Thomas' };
-const element = <h1>{formatName(user)}</h1>;
+
+function buttonClicked() {
+  console.log("Button clicked");
+}
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello, World!</h1>
-      <h1>Hello, {name}</h1>
-      {element}
-
-      <div>
-      <h2>Part 1</h2>
-      <h2>Part 2</h2>
-      </div>
-
-      <img src="https://livingsimplyy.files.wordpress.com/2016/09/6847284-samurai-champloo-wallpaper.jpg?w=1200" />
-
-      <button id="myButton">Click me</button>
-
+      {hello}
+      {greeting}
+      {fullName}
+      {parts}
+      {image}
+      {click}
     </div>
-    
   );
 }
-
-var button = document.getElementById('myButton');
-button.addEventListener('click', function() {
-    console.log('Button clicked');
-  });
-
 
 export default App;
