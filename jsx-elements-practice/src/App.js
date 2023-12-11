@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
 
+
 function App() {
   const intro = (
     <div>
@@ -10,42 +11,38 @@ function App() {
   );
 
   const name = "Cindy";
-  const greet = <h1>Howdy {name}!</h1>;
+  const greeting = <h1>Hello, {name}!</h1>;
 
   function formatName(user) {
-    return user.fName + " " + user.lName;
+    return `${user.fName} ${user.lName}`;
   }
 
-  const user = {
-    fName: "Carlos",
-    lName: "Godoy",
-  };
-
-  const element = {
+  const parts = (
     <div>
       <h2>Part 1</h2>
       <h2>Part 2</h2>
-      </div>
-  };
-    
+    </div>
+  );
 
+  const picture = (
+    <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+  );
 
-  {/* // const pic = <img src={logo} alt="logo"></img>;
-
- function handleClick = () {
+  const handleClick = () => {
     console.log("Button clicked");
   };
 
-  const clickElement = <button onClick={(handleClick)}>Click Here</button>; */}
+  const bonus = <button onClick={handleClick}>Click me</button>;
 
   return (
-   
-      <h1>
-        {intro} {greet}
-      </h1>
-      {formatName(user)}
-      {element}
-    
+    <div>
+      {intro}
+      {greeting}
+      {formatName}
+      {parts}
+      {picture}
+      {bonus}
+    </div>
   );
 }
 
